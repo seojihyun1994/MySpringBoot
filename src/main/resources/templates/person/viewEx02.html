@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="lavender">
+    <font color="white">
+        <h1>
+            <div align="center">
+                이름 : <span th:text="${bean.name}"></span>
+            </div>
+            <div align="center">
+                나이 : <span th:text="${bean.age}"></span>
+            </div>
+            <div align="center">
+                직업 : <span th:text="${bean.job}"></span>
+            </div>
+            <div align="center">
+                생일 : <span th:text="${bean.birth}"></span>
+            </div>
+            <div align="center">
+                국적 : <span th:text="${bean.country}"></span>
+            </div>
+        </h1>
+    </font>
+</body>
+</html>

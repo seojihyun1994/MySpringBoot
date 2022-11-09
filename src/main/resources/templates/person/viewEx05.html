@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="lavender">
+    <font color="white">
+        <table align="center" border="1">
+            <thead>
+                <tr>
+                    <td>짝/홀</td>
+                    <td>이름</td>
+                    <td>나이</td>
+                    <td>직업</td>
+                    <td>국적</td>
+                    <td>생일</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="bean, status:${personDtoList}">
+                    <td th:switch="${status.even}">
+                        <span th:case="true">짝수</span>
+                        <span th:case="false">홀수</span>
+                    </td>
+                    <td th:text="${bean.name}"></td>
+                    <td th:text="${bean.age}"></td>
+                    <td th:text="${bean.job}"></td>
+                    <td th:text="${bean.country}"></td>
+                    <td th:text="${bean.birth}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </font>
+</body>
+</html>

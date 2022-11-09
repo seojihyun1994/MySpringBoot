@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="lavender">
+<div align="center">
+    <font color="white">
+        <h1 align="center">
+            링크 처리 예제
+        </h1>
+        <div>
+            <a th:href="@{/person/ex01}">예제 1번으로 이동하기</a>
+        </div>
+        <div>
+            <a th:href="@{http://www.thymeleaf.org}">thymeleaf 공식 홈 페이지</a>
+        </div>
+        <div>
+            <a th:href="@{/person/ex07/(param1='안녕',param2='하이')}">예제 07번(파라미터 전달)</a>
+        </div>
+    </font>
+</div>
+</body>
+</html>
